@@ -1,0 +1,162 @@
+.page {
+  &__main {
+  }
+}
+
+.main {
+  padding-bottom: 80px;
+
+  @media (max-width: $breakPoint992) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $breakPoint768) {
+    padding-bottom: 30px;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    align-self: flex-end;
+    padding-top: 120px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+
+    @media (max-width: $breakPoint1092) {
+      flex: 0 0 60%;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: $breakPoint768) {
+      flex: 1 1 100%;
+      padding-top: 80px;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    font-family: CalSans;
+    font-size: 56px;
+    line-height: 1.2;
+    color: $primaryColor;
+
+    @media (max-width: $breakPoint768) {
+      font-size: 44px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    & span {
+      color: $thirdColor;
+    }
+  }
+
+  &__text {
+    max-width: 420px;
+    line-height: $secondaryLineHeight;
+    font-weight: $primaryFontWeight;
+
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__actions {
+  }
+}
+
+.actions-main {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $breakPoint480) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    font-weight: $secondaryFontWeight;
+    line-height: $secondaryLineHeight;
+    text-align: center;
+    color: #ffffff;
+    background-color: $thirdColor;
+    border-radius: 40px;
+    padding: 18px 48px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: #ba4619;
+    }
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    @media (max-width: $breakPoint480) {
+      flex: 1 1 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+}
+
+.main {
+  &__decor {
+    flex: 0 1 50%;
+
+    @media (max-width: $breakPoint1092) {
+      flex: 0 0 40%;
+    }
+
+    @media (max-width: $breakPoint768) {
+      display: none;
+    }
+  }
+
+  &__image {
+    // display: inline-block;
+    max-width: 672px;
+    position: relative;
+    padding-bottom: 97.6%;
+    margin-right: -135px;
+
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 160px 375px;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+
+      @media (max-width: $breakPoint1092) {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: url('../img/main/decor.svg') 0 0 no-repeat;
+      transform: translate(0, 50%);
+      right: 36.3%;
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.header {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: 152px;
+    gap: 131px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    @media (max-width: $breakPoint1092) {
+      min-height: 100px;
+      gap: 50px;
+    }
+
+    @media (max-width: $breakPoint768) {
+      min-height: 65px;
+    }
+
+    @media (max-width: $breakPoint480) {
+      gap: 15px;
+    }
+  }
+
+  &__logo {
+    @media (max-width: $breakPoint480) {
+      width: 28px;
+      flex: 0 0 28px;
+      overflow: hidden;
+    }
+  }
+
+  &__menu {
+  }
+}
+
+.menu {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px 10px 0px;
+
+  @media (max-width: $breakPoint480) {
+    padding: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 56px;
+
+    @media (max-width: $breakPoint1092) {
+      column-gap: 40px;
+    }
+
+    @media (max-width: $breakPoint480) {
+      column-gap: 20px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: $primaryFontWeight;
+    color: $secondaryColor;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
