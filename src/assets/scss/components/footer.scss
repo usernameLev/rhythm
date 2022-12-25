@@ -1,0 +1,156 @@
+.footer {
+  background-color: #eeeeee;
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  @media (max-width: $breakPoint992) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__copy {
+    text-align: center;
+    padding-top: 80px;
+
+    @media (max-width: $breakPoint768) {
+      padding-top: 50px;
+    }
+  }
+}
+
+.body-footer {
+  display: flex;
+  column-gap: 50px;
+  row-gap: 30px;
+
+  @media (max-width: $breakPoint992) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    @media (max-width: $breakPoint992) {
+      &:first-child {
+        flex: 1 1 100%;
+      }
+    }
+
+    &_full {
+      flex: 1 1 auto;
+
+      @media (max-width: $breakPoint992) {
+        flex: 0 1 50%;
+      }
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__contacts {
+  }
+
+  &__menu {
+  }
+
+  &__social {
+  }
+}
+
+.contacts-footer {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: $secondaryLineHeight;
+    color: inherit;
+    padding-left: 44px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &_mail {
+      background: url('../img/footer/sms.svg') left no-repeat;
+    }
+
+    &_location {
+      background: url('../img/footer/location.svg') left no-repeat;
+    }
+  }
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 120px;
+
+  @media (max-width: $breakPoint992) {
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__column {
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: $secondaryFontWeight;
+    text-transform: uppercase;
+    color: $primaryColor;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social-footer {
+  &__title {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: $secondaryFontWeight;
+    text-transform: uppercase;
+    color: $primaryColor;
+    margin-bottom: 12px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__item {
+  }
+}

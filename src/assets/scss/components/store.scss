@@ -1,6 +1,9 @@
 .page {
-  padding-top: 80px;
   padding-bottom: 90px;
+
+  @media (max-width: $breakPoint768) {
+    padding-top: 80px;
+  }
 
   &__store {
   }
